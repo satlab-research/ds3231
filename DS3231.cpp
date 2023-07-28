@@ -4,11 +4,11 @@
 #include "DS3231.h"
 
 
-DS3231::DS3231(i2c_inst_t *inst, int sda, int scl)
+DS3231::DS3231(/*i2c_inst_t *inst, int sda, int scl*/)
 {
-    this->inst = inst;
-    this->sda = sda;
-    this->scl = scl;
+    // this->inst = inst;
+    // this->sda = sda;
+    // this->scl = scl;
 
     i2c_init(this->inst, 400*1000); // 100 Khz.
 

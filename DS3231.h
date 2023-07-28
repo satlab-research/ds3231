@@ -21,9 +21,9 @@
 class DS3231
 {
 	private:
-		i2c_inst_t* inst;
-		int sda;
-		int scl;
+		i2c_inst_t* inst = i2c0;
+		int sda = 8;
+		int scl = 9;
 	
 		uint8_t dectobcd(const uint8_t val);
 		uint8_t bcdtodec(const uint8_t val);
@@ -36,7 +36,7 @@ class DS3231
 		void set_time(uint8_t hour, uint8_t min, uint8_t sec);
 		void read_time(uint8_t *hour, uint8_t *min, uint8_t *sec);
 
-		DS3231(i2c_inst_t *inst, int sda, int scl);
+		DS3231(/*i2c_inst_t *inst, int sda, int scl*/);
 		~DS3231();
 
 };
